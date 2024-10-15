@@ -5,9 +5,12 @@ body{
     margin: 0;
     padding: 0;
     background: url(/descarga\ \(2\).jpg) ;
+    justify-content: center;
+    justify-content: space-between;
 }
 img{
     width: 100%;
+    justify-content: space-between;
 }
 .row{
     display: flex;
@@ -17,10 +20,13 @@ img{
 .column{
     flex: 25%;
     padding: 5px;
-    grid-template-columns: repeat(3 1fr);
+    grid-template-columns: repeat(2 1fr);
+    flex-basis: 25%;
 }
 .column img {
     margin-top: 5px;
+    border: 10px solid brown;
+    display: block;
     
 
 
@@ -37,11 +43,16 @@ img{
         
     }
 }.header{
-    margin: 20px;
-    background-color: grey;
+    margin: 0px;
+    background-color: thistle;
     text-decoration: none;
+    
 }
 .beta{
     width: 390px;
 
+}
+.val{
+    width: 50px;
+    
 }
