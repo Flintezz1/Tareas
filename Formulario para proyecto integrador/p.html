@@ -1,0 +1,83 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #0c0c0c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #020202;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Encuentra tu Carro Ideal</h2>
+        <form action="/buscar-carros" method="GET">
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" placeholder="Ej: Toyota, Ford">
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla, Mustang">
+            </div>
+            <div class="form-group">
+                <label for="precio">Rango de Precio:</label>
+                <select id="precio" name="precio">
+                    <option value="">Selecciona un rango</option>
+                    <option value="20000-30000">$40,000 - $70,000</option>
+                    <option value="30000-40000">$80,000 - $100,000</option>
+                    <option value="40000-50000">$110,000 - $150,000</option>
+                    <option value="50000">Más de $200,000</option>
+                </select>
+            </div>
+            <input type="submit" value="Buscar">
+        </form>
+    </div>
+</body>
+</html>
